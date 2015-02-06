@@ -103,7 +103,7 @@ Bool parseInputs(syncInput *si, int argC,  char *argV[]) {
     
     si->programName = ProgramName;
     
-    if (argC < 1) {
+    if (argC == 1) {
         
         SHOWUSAGE;
         
