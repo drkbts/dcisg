@@ -1,13 +1,13 @@
 all: dcisg clean
 
 dcisg: sync.o dcisg.o
-	$(CC) -o dcisg sync.o dcisg.o
+	gcc -std=c99 -o dcisg sync.o dcisg.o
 	
 sync.o: sync.c sync.h
-	$(CC) -c sync.c
+	gcc -std=c99 -c sync.c
 	
 dcisg.o: dcisg.c dcisg.h sync.h
-	$(CC) -c dcisg.c
+	gcc -std=c99 -c dcisg.c
 	
 clean:
 	rm sync.o dcisg.o
